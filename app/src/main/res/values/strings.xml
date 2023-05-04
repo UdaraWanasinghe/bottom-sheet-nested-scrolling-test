@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bottom Sheet Test</string>
+    <string name="open_bottom_sheet">Open Bottom Sheet</string>
+</resources>
