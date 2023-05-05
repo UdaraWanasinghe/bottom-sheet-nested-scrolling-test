@@ -1,30 +1,17 @@
-package com.example.bottomsheettest
+package com.example.bottomsheettest.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.bottomsheettest.R
+import com.example.bottomsheettest.adapters.SimplePageAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-internal class SimpleBottomSheet : BottomSheetDialogFragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return BottomSheetContent(inflater.context).apply {
-            layoutParams = ViewGroup.LayoutParams(
-                MATCH_PARENT, MATCH_PARENT
-            )
-        }
-    }
+internal class OldBottomSheet : BottomSheetDialogFragment(R.layout.bottom_sheet_layout) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val viewPager = view.findViewById<ViewPager2>(R.id.view_pager)

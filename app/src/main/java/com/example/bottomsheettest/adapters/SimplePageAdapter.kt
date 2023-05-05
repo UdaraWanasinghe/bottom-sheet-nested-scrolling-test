@@ -1,4 +1,4 @@
-package com.example.bottomsheettest
+package com.example.bottomsheettest.adapters
 
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-internal class SimplePageAdapter: RecyclerView.Adapter<SimplePageAdapter.ViewHolder>() {
+internal class SimplePageAdapter : RecyclerView.Adapter<SimplePageAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
         return 3
@@ -18,16 +18,17 @@ internal class SimplePageAdapter: RecyclerView.Adapter<SimplePageAdapter.ViewHol
             layoutParams = RecyclerView.LayoutParams(
                 MATCH_PARENT, MATCH_PARENT
             )
-            layoutManager = GridLayoutManager(context,2, LinearLayoutManager.VERTICAL, false)
+            layoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
         }
         return ViewHolder(pageView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val pageView = holder.itemView as RecyclerView
-        pageView.adapter = NumberedItemAdapter()
+        pageView.tag = "PAGE_TAG$position"
+        pageView.adapter = NumberedItemAdapter(position)
     }
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
 }
