@@ -21,10 +21,10 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 @LargeTest
-class OldBottomSheetInstrumentedTest {
+class NewBottomSheetInstrumentedTest {
 
     @get:Rule
-    val activityRule = ActivityScenarioRule(OldBottomSheetActivity::class.java)
+    val activityRule = ActivityScenarioRule(NewBottomSheetActivity::class.java)
 
     @Test
     fun testNestedScrollingChild() {

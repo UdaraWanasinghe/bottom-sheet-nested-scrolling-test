@@ -2,10 +2,10 @@ package com.example.bottomsheettest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bottomsheettest.ui.OldBottomSheet
+import com.example.bottomsheettest.ui.NewBottomSheet
 import com.google.android.material.button.MaterialButton
 
-class OldBottomSheetActivity : AppCompatActivity() {
+class NewBottomSheetActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,7 +13,7 @@ class OldBottomSheetActivity : AppCompatActivity() {
 
         val button = findViewById<MaterialButton>(R.id.open_button)
         button.setOnClickListener {
-            OldBottomSheet().show(
+            NewBottomSheet().show(
                 supportFragmentManager,
                 "BOTTOM_SHEET"
             )
