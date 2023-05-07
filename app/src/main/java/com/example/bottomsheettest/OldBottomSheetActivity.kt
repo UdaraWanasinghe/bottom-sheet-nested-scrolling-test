@@ -2,7 +2,7 @@ package com.example.bottomsheettest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bottomsheettest.ui.OldBottomSheet
+import com.example.bottomsheettest.ui.OldBottomSheetDialog
 import com.google.android.material.button.MaterialButton
 
 class OldBottomSheetActivity : AppCompatActivity() {
@@ -13,7 +13,7 @@ class OldBottomSheetActivity : AppCompatActivity() {
 
         val button = findViewById<MaterialButton>(R.id.open_button)
         button.setOnClickListener {
-            OldBottomSheet().show(
+            OldBottomSheetDialog().show(
                 supportFragmentManager,
                 "BOTTOM_SHEET"
             )
